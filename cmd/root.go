@@ -40,7 +40,6 @@ import (
 
 var cfg config.Config
 
-// rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Use:   "tondns",
 	Short: "TON DNS domain management tool",
@@ -83,7 +82,6 @@ func unmarshalArgs() {
 		&cfg,
 		viper.DecodeHook(
 			mapstructure.ComposeDecodeHookFunc(
-				// Function to add a special type for «env. mode»
 				func(f, t reflect.Type, data any) (any, error) {
 					if f.Kind() != reflect.String || t != reflect.TypeOf(config.ProxyURL{}) {
 						return data, nil
