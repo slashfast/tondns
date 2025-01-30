@@ -35,7 +35,6 @@ import (
 	"github.com/spf13/viper"
 )
 
-// checkCmd represents the check command
 var checkCmd = &cobra.Command{
 	Use:   "check [domains...]",
 	Short: "Check TON DNS domains expiration status",
