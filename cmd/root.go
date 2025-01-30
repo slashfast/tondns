@@ -29,8 +29,8 @@ import (
 	"os"
 	"reflect"
 	"strings"
-	"tondns/internal/config"
-	"tondns/pkg/ton"
+	"github.com/slashfast/tondns/internal/config"
+	"github.com/slashfast/tondns/pkg/ton"
 
 	"github.com/mitchellh/mapstructure"
 

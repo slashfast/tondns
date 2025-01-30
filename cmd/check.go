@@ -29,7 +29,7 @@ import (
 	"os"
 	"strings"
 	"sync"
-	"tondns/internal/check"
+	"github.com/slashfast/tondns/internal/check"
 
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"

@@ -27,9 +27,9 @@ import (
 	"context"
 	"fmt"
 	"time"
-	"tondns/internal/config"
-	"tondns/pkg/gems"
-	"tondns/pkg/ton"
+	"github.com/slashfast/tondns/internal/config"
+	"github.com/slashfast/tondns/pkg/gems"
+	"github.com/slashfast/tondns/pkg/ton"
 
 	"github.com/xssnick/tonutils-go/tlb"
 	"github.com/xssnick/tonutils-go/ton/dns"

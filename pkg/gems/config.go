@@ -25,7 +25,7 @@ package gems
 
 import (
 	"time"
-	"tondns/internal/config"
+	"github.com/slashfast/tondns/internal/config"
 )
 
 type Config struct {

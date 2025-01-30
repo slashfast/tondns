@@ -23,7 +23,7 @@
 
 package main
 
-import "tondns/cmd"
+import "github.com/slashfast/tondns/cmd"
 
 func main() {
 	cmd.Execute()

@@ -1,4 +1,4 @@
-module tondns
+module github.com/slashfast/tondns
 
 go 1.23
 

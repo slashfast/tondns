@@ -25,7 +25,7 @@ package config
 
 import (
 	"time"
-	"tondns/pkg/ton"
+	"github.com/slashfast/tondns/pkg/ton"
 )
 
 type Config struct {
