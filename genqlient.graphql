@@ -1,0 +1,22 @@
+query History($address: String!, $first: Int!, $after: String) {
+    historyNftItem(address: $address, first: $first, after: $after) {
+        items {
+            createdAt
+            address
+        }
+        cursor
+    }
+}
+
+query Items($address: String!, $first: Int!, $after: String) {
+    nftItemsByOwner(ownerAddress: $address, first: $first, after: $after) {
+        items {
+            address
+            name
+            collection {
+                address
+            }
+        }
+        cursor
+    }
+}
