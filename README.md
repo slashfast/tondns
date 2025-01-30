@@ -1,7 +1,8 @@
 # tondns
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/slashfast/tondns)](https://goreportcard.com/report/github.com/slashfast/tondns)
-[![License](https://img.shields.io/github/license/slashfast/tondns)](LICENSE) ![Static Badge](https://img.shields.io/badge/Based_on_TON-ffffff?logo=ton) ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/slashfast/tondns/latest)
+[![License](https://img.shields.io/github/license/slashfast/tondns)](LICENSE) [![Static Badge](https://img.shields.io/badge/Based_on_TON-ffffff?logo=ton)](https://ton.org)
+ ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/slashfast/tondns/latest)
 
 
 
