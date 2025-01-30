@@ -25,6 +25,7 @@ package ton
 
 import (
 	"errors"
+	"strings"
 
 	"github.com/xssnick/tonutils-go/ton/wallet"
 )
@@ -32,21 +33,21 @@ import (
 type WalletVersion string
 
 const (
-	V1R1               WalletVersion = "V1R1"
-	V1R2               WalletVersion = "V1R2"
-	V1R3               WalletVersion = "V1R3"
-	V2R1               WalletVersion = "V2R1"
-	V2R2               WalletVersion = "V2R2"
-	V3R1               WalletVersion = "V3R1"
-	V3R2               WalletVersion = "V3R2"
-	V4R1               WalletVersion = "V4R1"
-	V4R2               WalletVersion = "V4R2"
-	HighloadV2R2       WalletVersion = "HighloadV2R2"
-	HighloadV2Verified WalletVersion = "HighloadV2Verified"
-	HighloadV3         WalletVersion = "HighloadV3"
-	V5R1Beta           WalletVersion = "V5R1Beta"
-	V5R1Final          WalletVersion = "V5R1Final"
-	V5R1               WalletVersion = "V5R1"
+	V1R1               WalletVersion = "v1r1"
+	V1R2               WalletVersion = "v1r2"
+	V1R3               WalletVersion = "v1r3"
+	V2R1               WalletVersion = "v2r1"
+	V2R2               WalletVersion = "v2r2"
+	V3R1               WalletVersion = "v3r1"
+	V3R2               WalletVersion = "v3r2"
+	V4R1               WalletVersion = "v4r1"
+	V4R2               WalletVersion = "v4r2"
+	HighloadV2R2       WalletVersion = "highloadv2r2"
+	HighloadV2Verified WalletVersion = "highloadv2verified"
+	HighloadV3         WalletVersion = "highloadv3"
+	V5R1Beta           WalletVersion = "v5r1beta"
+	V5R1Final          WalletVersion = "v5r1final"
+	V5R1               WalletVersion = "v5r1"
 )
 
 func (e *WalletVersion) String() string {
@@ -54,21 +55,17 @@ func (e *WalletVersion) String() string {
 }
 
 func (e *WalletVersion) Set(v string) error {
+	v = strings.ToLower(v)
 	switch v {
-	case "V1R1", "V1R2", "V1R3", "V2R1",
-		"V2R2", "V3R1", "V3R2", "V4R1",
-		"V4R2", "HighloadV2R2", "HighloadV2Verified",
-		"HighloadV3", "V5R1Beta", "V5R1Final", "V5R1":
+	case "v1r1", "v1r2", "v1r3",
+		"v2r1", "v2r2", "v3r1",
+		"v3r2", "v4r1", "v4r2",
+		"highloadv2r2", "highloadv2verified", "highloadv3",
+		"v5r1beta", "v5r1final", "v5r1":
 		*e = WalletVersion(v)
 		return nil
 	default:
-		return errors.New(
-			`must be one of 
-			"V1R1", "V1R2", "V1R3", "V2R1", "V2R2", 
-			"V3R1", "V3R2", "V4R1", "V4R2", "HighloadV2R2", 
-			"HighloadV2Verified", "HighloadV3", "V5R1Beta", 
-			"V5R1Final", "V5R1"`,
-		)
+		return errors.New("must be one of v1r1, v1r2, v1r3, v2r1, v2r2, v3r1, v3r2, v4r1, v4r2, highloadv2r2, highloadv2verified, highloadv3, v5r1beta, v5r1final, v5r1")
 	}
 }
 
