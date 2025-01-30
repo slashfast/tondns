@@ -49,7 +49,7 @@ Allows checking domain expiration dates, managing domain renewals,
 and monitoring domain status. Supports both interactive and automated usage.
 
 For detailed documentation and examples, visit:
-https://github.com/slashfast/tonft`,
+https://github.com/slashfast/tondns`,
 }
 
 func Execute() {
